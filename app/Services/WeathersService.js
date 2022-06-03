@@ -8,8 +8,8 @@ class WeathersService{
     try{
     const res = await sandboxAPI.get('weather')
     console.log(res.data);
-    ProxyState.weather = res.data
-    console.log(ProxyState.weather.main.temp);
+    ProxyState.weather = new Weather(res.data)
+    // console.log(ProxyState.weather);
     }
     catch(error){
       console.error('error');
