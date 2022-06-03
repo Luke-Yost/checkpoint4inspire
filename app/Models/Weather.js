@@ -1,7 +1,7 @@
 
 
 export class Weather{
-  constructor(wthrData){
-    this.kelvinTemp = wthrData.temp
+  constructor(data){
+    this.kelvinTemp = data.temp
   }
 }
