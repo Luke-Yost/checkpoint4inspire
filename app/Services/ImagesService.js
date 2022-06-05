@@ -7,7 +7,7 @@ class ImagesService{
   async getImage(){
     const res = await sandboxAPI.get('images')
     console.log('mr url arrived', res.data);
-    // ProxyState.image = new Image()
+    ProxyState.image = new Image(res.data)
   }
 }
 
