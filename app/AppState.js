@@ -9,7 +9,7 @@ class AppState extends EventEmitter {
   // /**@type {import('./Models/Weather').Weather{}  } */
   weather = {}
 
-  image = {}
+  image = ""
 
 }
 
