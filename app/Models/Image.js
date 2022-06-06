@@ -2,13 +2,13 @@
 
 export class Image{
   constructor(data){
-    this.image = data.largeImgUrl
-    // console.log(this.image)
+    this.img = data.largeImgUrl
+    
   }
 
   // get Template(){
   //   return `
-  //   "url('${this.image}')"
+  //   "url(${this.img})"
   //   `
   // }
 

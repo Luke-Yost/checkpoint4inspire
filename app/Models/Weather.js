@@ -13,15 +13,15 @@ export class Weather{
   get celciusTemplate(){
     return`
     <h1>🌤️ ${Math.round(this.celciusTemp)}C </h1>
-    <button class="p-1 btn btn-info" onclick="app.WeathersController.toFahrenheit()">To Fahrenheit</button>
+    <button class="p-1 btn btn-info" onclick="app.weathersController.toFahrenheit()">To Fahrenheit</button>
                   <h3>Boise, ID</h3>
     `
   }
 
   get fahrenheitTemplate(){
     return`
-    <h1>🌤️ ${Math.round(this.degreeTemp)}C </h1>
-    <button class="p-1 btn btn-info" onclick="app.WeathersController.toCelcius()">To Celcius</button>
+    <h1>🌤️ ${Math.round(this.degreeTemp)}F </h1>
+    <button class="p-1 btn btn-info" onclick="app.weathersController.toCelcius()">To Celcius</button>
                   <h3>Boise, ID</h3>
     `
   }
