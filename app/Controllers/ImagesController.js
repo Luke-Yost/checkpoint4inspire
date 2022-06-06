@@ -2,12 +2,12 @@ import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 
 function _drawImage(){
-console.log(ProxyState.image);
+// console.log(ProxyState.image);
   document.body.style.backgroundImage = `url(${ProxyState.image.img})`
 }
 export class ImagesController{
   constructor(){
-    console.log('img workin');
+    // console.log('img workin');
     this.getImage()
     ProxyState.on('image', _drawImage)
   }

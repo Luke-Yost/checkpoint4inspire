@@ -13,6 +13,8 @@ class AppState extends EventEmitter {
 
   quote = {}
 
+  clock = {}
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -1,3 +1,4 @@
+import { ClocksController } from "./Controllers/ClocksController.js";
 import { ImagesController } from "./Controllers/ImagesController.js";
 import { QuotesController } from "./Controllers/QuotesController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
@@ -11,6 +12,8 @@ class App {
   imagesController = new ImagesController()
 
   quotesController = new QuotesController()
+
+  clocksController = new ClocksController()
 
 }
 

@@ -5,7 +5,7 @@ import { sandboxAPI } from "../Utils/Axios.js";
 class QuotesService{
   async getQuotes(){
     const res = await sandboxAPI.get('quotes')
-    console.log('getin quote', res.data);
+    // console.log('getin quote', res.data);
     ProxyState.quote = new Quote(res.data)
   }
 }

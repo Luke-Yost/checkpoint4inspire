@@ -12,10 +12,10 @@ function _drawWeather(){
 
 export class WeathersController{
   constructor(){
-    console.log('raining?');
+    // console.log('raining?');
     ProxyState.on('weather', _drawWeather) 
     this.getWeather()
-    console.log(ProxyState.weather);
+    // console.log(ProxyState.weather);
   }
 
   getWeather(){
