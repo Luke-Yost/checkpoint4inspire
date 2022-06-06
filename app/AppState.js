@@ -13,7 +13,7 @@ class AppState extends EventEmitter {
 
   quote = {}
 
-  clock = {}
+  todos = []
 
 }
 
