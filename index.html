@@ -33,7 +33,7 @@
             
               <div class="row">
                 <div  class="col-12 d-flex justify-content-end">
-                  <div id="weather">
+                  <div class="m-3" id="weather">
 
                     <!-- <div id="weatherTemp"></div> -->
                     <!-- h1>🌤️ ${Math.round(this.celciusTemp)}C </h1>
@@ -46,7 +46,7 @@
 
               <div class="row ">
                 <div class="col-12 d-flex justify-content-center align-items-center mh-70">
-                  <div id="clock">
+                  <div class="my-3" id="clock">
                     
                   </div>
                 </div>
@@ -65,11 +65,11 @@
                 <div class="col-6">
                   <div class="card">
                     <div class="card-body text-info">
-                      <h3 class="card-title text-center">To-dos:</h3>
-                      <div class="input-group mb-3">
+                      <h3 class="card-title text-center"><b>To-dos:</b></h3>
+                      <div class="input-group mb-3 d-flex justify-content-center">
                         <form  onsubmit="app.todosController.makeTodo()">
                           <input type="text" class="form-control" placeholder="To-do" name="name" id="name">
-                          <button>Make Do</button>
+                          <button class="btn-success m-2">Make Do</button>
                         </form>
                       </div
                       
