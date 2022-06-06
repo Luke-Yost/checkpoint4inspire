@@ -1,6 +1,7 @@
 /* BASIC STYLES HERE */
-backgroundImage{
+.backgroundImage{
   object-fit: contain !important;
+  background-size: cover;
 }
 
 .hidden{

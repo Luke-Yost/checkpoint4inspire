@@ -12,7 +12,7 @@ class TodosService{
     const res = await todoAPI.get()
     console.log('get todo', res.data);
     ProxyState.todos = res.data.map(t => new Todo(t))
-    console.log(ProxyState.todos, res.data);
+    console.log(ProxyState.todos,'wat');
   }
 
 
@@ -22,6 +22,14 @@ class TodosService{
     ProxyState.todos = [...ProxyState.todos, new Todo(res.data)]
   }
 
+  async deleteTodo(id){
     
+    
+    const res = await todoAPI.delete(id)
+    console.log(res.data);
+    ProxyState.todos = ProxyState.todos.filter(d => d.id !==id)
+
+  }
+
 }
 export const todosService = new TodosService()

@@ -5,16 +5,17 @@ import { Pop } from "../Utils/Pop.js";
 
 
 function _draw(){
-  let todos = ProxyState.todos
+    
   let template = ''
-  todos.forEach(t => template += t.Template)
+  ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById('todolist').innerHTML = template
 }
 export class TodosController{
   constructor(){
+    this.getTodos()
     console.log('todoin');
     ProxyState.on('todos', _draw)
-    this.getTodos()
+    
     // this.makeTodo()
   }
 
@@ -42,12 +43,9 @@ export class TodosController{
       }
   }
 
-  async deleteTodo(id){
-    try{
-      todosService.deleteTodo(id)
-    }
-    catch(error){
-      console.error(error);
+  async deleteTodo(id){ 
+    if(confirm('Delete To-do')){
+      await todosService.deleteTodo(id)
     }
   }
 
