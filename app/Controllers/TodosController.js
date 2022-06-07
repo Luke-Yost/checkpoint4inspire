@@ -5,9 +5,17 @@ import { Pop } from "../Utils/Pop.js";
 
 
 function _draw(){
-    
+  let todoCount = 0 
+  let todoneCount = 0
   let template = ''
-  ProxyState.todos.forEach(t => template += t.Template)
+  ProxyState.todos.forEach(t => {
+    template += t.Template
+    if(t.completed){
+      todoneCount++}
+      else{todoCount++}
+    })
+
+    document.getElementById('count').innerText = `To-Dos: ${todoCount}| To-Dones: ${todoneCount}`
   document.getElementById('todolist').innerHTML = template
 }
 export class TodosController{
