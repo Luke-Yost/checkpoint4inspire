@@ -49,4 +49,13 @@ export class TodosController{
     }
   }
 
+  async completeTodo(id){
+    try {
+      await todosService.completeTodo(id)
+    }
+    catch(error){
+      console.error(error);
+    }
+  }
+
 }

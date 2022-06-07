@@ -31,5 +31,12 @@ class TodosService{
 
   }
 
+  async completeTodo(id){
+    let toDone = ProxyState.todos.find(t => t.id == id)
+    toDone.completed = !toDone.completed
+    const res = await todoAPI.put(toDone.id, toDone)
+    ProxyState.todos = ProxyState.todos
+  }
+
 }
 export const todosService = new TodosService()
